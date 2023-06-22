@@ -1,1 +1,48 @@
-
+{
+  "id": "did:web:krustry-krab.vercel.app",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:krustry-krab.vercel.app"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://krustry-krab.vercel.app/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/61e8ef75-3caf-439b-8fc2-36c47c4f0cd8"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#4ccdea29b7ec4ca6b7ed177e183d7976vcSigningKey-b5c8b",
+      "controller": "did:web:krustry-krab.vercel.app",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "mMm-NVhd5UAZXsorazYAarAem8YRe_OH2nKTO03oKFg",
+        "y": "5CEbh5agSQa8E7T4eS55E06b_V9e8IdhchFQpsgcN0g"
+      }
+    }
+  ],
+  "authentication": [
+    "#4ccdea29b7ec4ca6b7ed177e183d7976vcSigningKey-b5c8b"
+  ],
+  "assertionMethod": [
+    "#4ccdea29b7ec4ca6b7ed177e183d7976vcSigningKey-b5c8b"
+  ]
+}
